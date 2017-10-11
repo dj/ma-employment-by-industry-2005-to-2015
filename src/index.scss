@@ -1,0 +1,52 @@
+$theme-primary-1: #14558f;
+$theme-primary-2: #43956f;
+$theme-primary-3: #535353;
+$theme-primary-4: #141414;
+$theme-secondary-1: #f6c51b;
+$theme-grey-1: #f2f2f2;
+$theme-grey-2: #dcdcdc;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: $theme-primary-4;
+  background-color: $theme-grey-1;
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  background-color: $theme-grey-1;
+  //   border: 1px solid black;
+}
+
+.chart {
+  padding: 0.25em;
+  width: 100%;
+  //   max-width: 400px;
+  height: 60px;
+  //   background-color: $theme-primary-3;
+}
+
+.page-header {
+  padding: 0.5em 1em;
+  color: $theme-grey-1;
+  background-color: $theme-primary-2;
+}
+
+.page-heading {
+  font-size: 1.35em;
+  font-weight: 500;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}

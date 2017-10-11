@@ -1,0 +1,7 @@
+export const themePrimary1 = '#14558f'
+export const themePrimary2 = '#14558f'
+export const themePrimary3 = '#535353'
+export const themePrimary4 = '#141414'
+export const themeSecondary1 = '#f6c51b'
+export const themeLightGrey = '#f2f2f2'
+export const themeDarkGrey = '#dcdcdc'
