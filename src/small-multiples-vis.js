@@ -15,6 +15,19 @@ export function SmallMultiplesVis() {
 	function render(selection) {
 		selection.each(function(data) {
 			console.log('data:', data)
+			// Eagerly calculate all the y scales for each industry
+			const yScale = {}
+			const line = {}
+			data.forEach(row => {
+				yScale[row.industry] = d3
+					.scaleLinear()
+					.domain([row.min, row.max])
+					.range([0, height])
+				line[row.industry] = d3
+					.line()
+					.x(d => xScale(new Date(d[0])))
+					.y(d => yScale[row.industry](d[1]))
+			})
 
 			// Select our visualization container and bind our data to each chart svg
 			const container = d3
@@ -26,7 +39,16 @@ export function SmallMultiplesVis() {
 			container
 				.enter()
 				.append('svg')
-				.attr('class', 'chart')
+				.attr('class', function(d) {
+					return `chart ${d.industry}`
+				})
+				.append('path')
+				.style('stroke', 'steelblue')
+				.style('fill', 'none')
+				.attr('d', function(d) {
+					console.log('attr d:', d)
+					return line[d.industry](d.values)
+				})
 		})
 	}
 

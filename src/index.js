@@ -5,7 +5,8 @@ import './index.scss'
 
 function transformData(rows) {
 	const data = rows.map(row => {
-		const industry = row.Industry
+		const label = row.Industry
+		const industry = row.Industry.toLowerCase().split(' ')[0]
 		const min = row.Min
 		const max = row.Max
 
@@ -13,12 +14,10 @@ function transformData(rows) {
 		delete row.Min
 		delete row.Max
 
-		// The remaining keys in row are all dates, convert to an array of [Date, Number]
-		const values = Object.entries(row).map(d => {
-			return [new Date(d[0]), d[1]]
-		})
+		const values = Object.entries(row)
 
 		return {
+			label,
 			industry,
 			min,
 			max,
