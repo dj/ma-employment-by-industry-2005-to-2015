@@ -126,7 +126,7 @@ export function SmallMultiplesVis() {
 				cursor.attr('y1', -2)
 				cursor.attr('x2', x)
 				cursor.attr('y2', height)
-				year.text(`${months[date.getMonth()]} ${date.getYear()}`)
+				year.text(`${months[date.getMonth()]} ${date.getFullYear()}`)
 				year.attr('x', x - 25)
 				year.attr('y', -5)
 				year.style('stroke', c.themePrimary1)
