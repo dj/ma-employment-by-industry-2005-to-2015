@@ -22986,7 +22986,7 @@ function SmallMultiplesVis() {
 			var year = group.append('text').attr('opacity', 0);
 
 			var mousemove = function mousemove() {
-				var x = d3.mouse(_this)[0] - 20;
+				var x = d3.mouse(_this)[0];
 				var date = xScale.invert(x);
 				cursor.attr('x1', x);
 				cursor.attr('y1', -2);
@@ -23096,7 +23096,7 @@ exports = module.exports = __webpack_require__(468)(undefined);
 
 
 // module
-exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nhtml {\n  color: #141414;\n  background-color: #f2f2f2; }\n\nbody {\n  margin: 0;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n\n#main {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  background-color: #f2f2f2; }\n\n.chart {\n  background-color: #f2f2f2; }\n\n.page-header {\n  padding: 0.5em 1em;\n  color: #f2f2f2;\n  background-color: #14558f; }\n\n.page-heading {\n  font-size: 1.35em;\n  font-weight: 500;\n  margin: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.15em; }\n", ""]);
+exports.push([module.i, "* {\n  box-sizing: border-box; }\n\nhtml {\n  color: #141414;\n  background-color: #f2f2f2; }\n\nbody {\n  margin: 0;\n  font-family: \"Helvetica Neue\", Helvetica, Arial, sans-serif; }\n\n#main {\n  display: flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  width: 100%;\n  max-width: 1600px;\n  background-color: #f2f2f2; }\n\n.chart {\n  background-color: #f2f2f2; }\n\n.page-header {\n  padding: 0.5em 1em;\n  color: #f2f2f2;\n  background-color: #14558f; }\n\n.page-heading {\n  font-size: 1.35em;\n  font-weight: 500;\n  margin: 0;\n  text-transform: uppercase;\n  letter-spacing: 0.15em; }\n", ""]);
 
 // exports
 

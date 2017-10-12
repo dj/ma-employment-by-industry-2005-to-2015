@@ -120,7 +120,7 @@ export function SmallMultiplesVis() {
 			const year = group.append('text').attr('opacity', 0)
 
 			const mousemove = () => {
-				const x = d3.mouse(this)[0] - 20
+				const x = d3.mouse(this)[0]
 				const date = xScale.invert(x)
 				cursor.attr('x1', x)
 				cursor.attr('y1', -2)
