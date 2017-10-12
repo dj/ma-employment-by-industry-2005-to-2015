@@ -13,7 +13,7 @@ $breakpoint: 1200px;
 
 html {
   color: $theme-primary-4;
-  background-color: $theme-grey-1;
+  // background-color: $theme-grey-1;
 }
 
 body {
@@ -26,18 +26,11 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 1900px;
-  margin: 0 auto;
-  background-color: $theme-grey-1;
+  // background-color: $theme-grey-1;
 }
 
 .chart {
-  width: 100%;
-  background-color: $theme-grey-2;
-  margin: 10px 10px;
-  @media (min-width: $breakpoint) {
-    width: calc(50% - 20px);
-  }
+  background-color: $theme-grey-1;
 }
 
 .page-header {

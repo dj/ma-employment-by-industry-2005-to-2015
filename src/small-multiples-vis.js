@@ -7,7 +7,7 @@ export function SmallMultiplesVis() {
 		start = new Date('Jan 2005'),
 		end = new Date('Dec 2015'),
 		margin = {
-			top: 20,
+			top: 50,
 			right: 20,
 			bottom: 20,
 			left: 20
@@ -49,23 +49,30 @@ export function SmallMultiplesVis() {
 			const chart = container
 				.enter()
 				.append('svg')
+				.attr('width', rect.width)
 				.attr('class', d => {
 					return `chart ${d.industry}`
 				})
+
+			const group = chart
 				.append('g')
+				.attr('width', width)
+				.attr('transform', 'translate(0,0)')
 				.attr('transform', `translate(${margin.left},${margin.top})`)
 
-			chart
+			group
 				.append('path')
 				.style('stroke', c.themePrimary2)
 				.style('fill', 'none')
 				.attr('d', d => {
 					return line[d.industry](d.values)
 				})
+				.style('stroke-width', 1.15)
 
-			chart
+			group
 				.append('text')
 				.text(d => d.label)
+				.attr('y', -20)
 				.style('color', c.themePrimary3)
 		})
 	}
