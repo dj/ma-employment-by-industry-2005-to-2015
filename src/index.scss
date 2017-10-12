@@ -5,6 +5,7 @@ $theme-primary-4: #141414;
 $theme-secondary-1: #f6c51b;
 $theme-grey-1: #f2f2f2;
 $theme-grey-2: #dcdcdc;
+$breakpoint: 1200px;
 
 * {
   box-sizing: border-box;
@@ -24,23 +25,25 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5px;
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto;
   background-color: $theme-grey-1;
-  //   border: 1px solid black;
 }
 
 .chart {
-  padding: 0.25em;
   width: 100%;
-  //   max-width: 400px;
-  height: 60px;
-  //   background-color: $theme-primary-3;
+  background-color: $theme-grey-2;
+  margin: 10px 10px;
+  @media (min-width: $breakpoint) {
+    width: calc(50% - 20px);
+  }
 }
 
 .page-header {
   padding: 0.5em 1em;
   color: $theme-grey-1;
-  background-color: $theme-primary-2;
+  background-color: $theme-primary-1;
 }
 
 .page-heading {

@@ -1,5 +1,5 @@
 export const themePrimary1 = '#14558f'
-export const themePrimary2 = '#14558f'
+export const themePrimary2 = '#43956f'
 export const themePrimary3 = '#535353'
 export const themePrimary4 = '#141414'
 export const themeSecondary1 = '#f6c51b'

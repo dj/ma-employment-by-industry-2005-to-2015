@@ -1,5 +1,4 @@
 import * as d3 from 'd3'
-import * as c from './colors'
 import { SmallMultiplesVis } from './small-multiples-vis'
 import './index.scss'
 
