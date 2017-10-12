@@ -21,11 +21,11 @@ module.exports = {
 	},
 	output: {
 		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'public/js'),
+		path: path.resolve(__dirname, 'docs/js'),
 		publicPath: 'js/'
 	},
 	devServer: {
-		contentBase: path.join(__dirname, 'public'),
+		contentBase: path.join(__dirname, 'docs'),
 		compress: true
 	}
 }
